@@ -7,12 +7,13 @@ import com.dea.mymoviecatalogue.data.response.DetailMovieResponse
 import com.dea.mymoviecatalogue.data.response.DetailTvShowResponse
 import com.dea.mymoviecatalogue.data.response.MovieResponse
 import com.dea.mymoviecatalogue.data.response.TvShowResponse
+import com.dea.mymoviecatalogue.repo.repointerface.Repository
 import com.dea.mymoviecatalogue.utils.EspressoIdlingResource
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
     private val apiService: ApiService
-) : Repository{
+) : Repository {
 
     override suspend fun getPopularMovies(): Resource<MovieResponse> {
         EspressoIdlingResource.increment()

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dea.mymoviecatalogue.Resource
 import com.dea.mymoviecatalogue.data.response.DetailTvShowResponse
-import com.dea.mymoviecatalogue.repo.Repository
+import com.dea.mymoviecatalogue.repo.repointerface.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

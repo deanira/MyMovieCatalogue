@@ -3,7 +3,7 @@ package com.dea.mymoviecatalogue.di
 import com.dea.mymoviecatalogue.BuildConfig
 import com.dea.mymoviecatalogue.data.api.ApiService
 import com.dea.mymoviecatalogue.repo.MainRepository
-import com.dea.mymoviecatalogue.repo.Repository
+import com.dea.mymoviecatalogue.repo.repointerface.Repository
 import com.dea.mymoviecatalogue.utils.Constant
 import com.google.gson.GsonBuilder
 import dagger.Module

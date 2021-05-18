@@ -2,7 +2,7 @@ package com.dea.mymoviecatalogue.repo
 
 import com.dea.mymoviecatalogue.Resource
 import com.dea.mymoviecatalogue.data.response.*
-import com.dea.mymoviecatalogue.repo.Repository
+import com.dea.mymoviecatalogue.repo.repointerface.Repository
 import com.dea.mymoviecatalogue.utils.DataDummyTest
 
 class FakeMainRepository : Repository {
