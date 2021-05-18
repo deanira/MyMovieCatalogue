@@ -1,118 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sv_detail_tv_shows"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.detail.tvshow.DetailTvShowActivity">
 
-    <FrameLayout
+    <ScrollView
+        android:id="@+id/sv_detail_tv_shows"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-
-<!--        saya menggunakan kenburnsview namun dalam instrumental test animasinya-->
-<!--        akan menimbulkan error, untuk itu saya ubah dulu menjadi imageview-->
-<!--        <com.flaviofaria.kenburnsview.KenBurnsView-->
-<!--            android:id="@+id/iv_detail"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:contentDescription="@string/poster"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            tools:src="@drawable/poster_spiderman" />-->
-
-        <ImageView
-            android:id="@+id/iv_detail"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/poster"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/poster_spiderman" />
+            android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/gradient_bg"
-            android:paddingHorizontal="32dp"
-            android:paddingBottom="16dp">
 
-            <TextView
-                android:id="@+id/tv_release_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tv_title"
-                app:layout_constraintLeft_toLeftOf="parent"
-                tools:text="2018" />
+            <!--        saya menggunakan kenburnsview namun dalam instrumental test animasinya-->
+            <!--        akan menimbulkan error, untuk itu saya ubah dulu menjadi imageview-->
+            <!--        <com.flaviofaria.kenburnsview.KenBurnsView-->
+            <!--            android:id="@+id/iv_detail"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:contentDescription="@string/poster"-->
+            <!--            android:scaleType="centerCrop"-->
+            <!--            tools:src="@drawable/poster_spiderman" />-->
 
-            <TextView
-                android:id="@+id/tv_genre"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tv_title"
-                app:layout_constraintLeft_toRightOf="@id/tv_release_year"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:text="ACTION" />
-
-            <TextView
-                android:id="@+id/tv_title"
-                style="@style/Title.Movie"
+            <ImageView
+                android:id="@+id/iv_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="380dp"
-                android:lineSpacingMultiplier="0.7"
-                android:textSize="64sp"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="SPIDERMAN: INTO THE SPIDER-VERSE" />
+                android:contentDescription="@string/poster"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/poster_spiderman" />
 
-            <TextView
-                android:id="@+id/tv_rating"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg"
+                android:paddingHorizontal="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_release_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tv_title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="2018" />
+
+                <TextView
+                    android:id="@+id/tv_genre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tv_title"
+                    app:layout_constraintLeft_toRightOf="@id/tv_release_year"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="ACTION" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/Title.Movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="380dp"
+                    android:lineSpacingMultiplier="0.7"
+                    android:textSize="64sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="SPIDERMAN: INTO THE SPIDER-VERSE" />
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_baseline_star_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    tools:text="84%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/tmdb"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/tv_rating"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rating"
+                    tools:text="@string/desc_spiderman" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawablePadding="4dp"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:drawableStartCompat="@drawable/ic_baseline_star_24"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_title"
-                tools:text="84%" />
+                app:theme="@style/CustomActionBar" />
+        </FrameLayout>
+    </ScrollView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/tmdb"
-                android:textColor="@color/yellow"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@id/tv_rating"
-                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="16dp"
-                android:justificationMode="inter_word"
-                android:textColor="@color/white"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_rating"
-                tools:text="@string/desc_spiderman" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_favorite"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:theme="@style/CustomActionBar" />
-    </FrameLayout>
-</ScrollView>
+            android:layout_alignParentEnd="true"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/add_to_favorite"
+            android:src="@drawable/ic_favorite_filled"
+            app:backgroundTint="@color/dark_blue_light"
+            app:tint="@color/white" />
+    </RelativeLayout>
+</FrameLayout>
