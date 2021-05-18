@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dea.mymoviecatalogue.Resource
 import com.dea.mymoviecatalogue.data.response.TvShowResultsItem
+import com.dea.mymoviecatalogue.repo.MainRepository
 import com.dea.mymoviecatalogue.repo.repointerface.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -12,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TvShowsViewModel @Inject constructor(
-    private val repository: Repository
+    private val repository: MainRepository
 ): ViewModel() {
     val listPopularTvShows = MutableLiveData<ArrayList<TvShowResultsItem>>()
     val listOnTheAirTvShows = MutableLiveData<ArrayList<TvShowResultsItem>>()

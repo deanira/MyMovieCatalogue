@@ -1,7 +1,10 @@
 package com.dea.mymoviecatalogue.ui.favorite
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.dea.mymoviecatalogue.R
 import com.dea.mymoviecatalogue.databinding.ActivityFavoriteBinding
 import com.dea.mymoviecatalogue.ui.main.SectionsPagerAdapter
@@ -21,9 +24,6 @@ class FavoriteActivity : AppCompatActivity() {
         val sectionsPagerAdapter = FavoriteSectionsPagerAdapter(this, supportFragmentManager)
         binding.viewPager.adapter = sectionsPagerAdapter
         binding.tabs.setupWithViewPager(binding.viewPager)
-
-        supportActionBar?.hide()
-        supportActionBar?.elevation = 0f
     }
 
     override fun onSupportNavigateUp(): Boolean {

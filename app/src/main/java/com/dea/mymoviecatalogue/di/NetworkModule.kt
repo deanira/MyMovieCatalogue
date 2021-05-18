@@ -51,8 +51,4 @@ object NetworkModule {
             .client(okHttpClient)
             .build()
     }
-
-    @Singleton
-    @Provides
-    fun provideInterfaceRepository(api: ApiService) = MainRepository(api) as Repository
 }

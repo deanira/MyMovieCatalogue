@@ -13,6 +13,6 @@ import javax.inject.Singleton
 object ServiceModule {
     @Singleton
     @Provides
-    fun provideGithubUserService(retrofit: Retrofit) =
+    fun provideMovieCatalogueService(retrofit: Retrofit) =
         retrofit.create(ApiService::class.java)
 }

@@ -9,10 +9,10 @@ interface FavoriteTvShowDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertFavorite(tvShow : FavoriteTvShow)
 
-    @Query("SELECT * FROM FavoriteMovie")
+    @Query("SELECT * FROM FavoriteTvShow")
     fun getAllData() : DataSource.Factory<Int, FavoriteTvShow>
 
-    @Query("SELECT * FROM FavoriteMovie WHERE movieId=:id")
+    @Query("SELECT * FROM FavoriteTvShow WHERE tvShowId=:id")
     suspend fun isFavorite(id : Int) : FavoriteTvShow
 
     @Delete
