@@ -1,6 +1,8 @@
 package com.dea.mymoviecatalogue.utils
 
 import com.dea.mymoviecatalogue.Resource
+import com.dea.mymoviecatalogue.data.favorite.FavoriteMovie
+import com.dea.mymoviecatalogue.data.favorite.FavoriteTvShow
 import com.dea.mymoviecatalogue.data.response.*
 
 object DataDummyTest {
@@ -358,6 +360,20 @@ object DataDummyTest {
                 "https://www.disneyplus.com/series/the-falcon-and-the-winter-soldier/4gglDBMx8icA",
                 "Ended"
             )
+        )
+    }
+
+    fun generateFavouriteMovie(): List<FavoriteMovie> {
+        return listOf(
+            FavoriteMovie(1, 1, "", "", 0.0, ""),
+            FavoriteMovie(2, 2, "", "", 0.0, ""),
+        )
+    }
+
+    fun generateFavouriteTv(): List<FavoriteTvShow> {
+        return listOf(
+            FavoriteTvShow(1, 1, "", "", 0.0, ""),
+            FavoriteTvShow(2, 2, "", "", 0.0, ""),
         )
     }
 }
