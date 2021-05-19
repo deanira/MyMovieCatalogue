@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.dea.myTvShowcatalogue.ui.favorite.tvshow.FavoriteTvShowViewModel
 import com.dea.mymoviecatalogue.R
 import com.dea.mymoviecatalogue.databinding.FragmentFavoriteTvShowBinding
 import com.dea.mymoviecatalogue.ui.favorite.movie.FavoriteMovieAdapter
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -47,6 +50,39 @@ class FavoriteTvShowFragment : Fragment() {
     }
 
     private fun touchHelper() {
+        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(
+            ItemTouchHelper.UP or ItemTouchHelper.DOWN,
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return true
+            }
 
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val data = adapter.differ.currentList[position]
+
+                favoriteTvShowViewModel.deleteFromFavorite(data)
+
+                Snackbar.make(
+                    binding.root,
+                    "Movie Deleted From Favourite",
+                    Snackbar.LENGTH_LONG
+                ).apply {
+                    setAction("UNDO") {
+                        favoriteTvShowViewModel.insertToFavorite(data)
+                    }
+                    show()
+                }
+            }
+        }
+
+        ItemTouchHelper(itemTouchHelperCallback).apply {
+            attachToRecyclerView(binding.rvFavTvShow)
+        }
     }
 }

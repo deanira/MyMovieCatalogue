@@ -27,7 +27,6 @@ class FavoriteMovieAdapter :
             ): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 
@@ -52,4 +51,6 @@ class FavoriteMovieAdapter :
             tvTitle.text = currentItem.title
         }
     }
+
+    override fun getItemCount(): Int = differ.currentList.size
 }

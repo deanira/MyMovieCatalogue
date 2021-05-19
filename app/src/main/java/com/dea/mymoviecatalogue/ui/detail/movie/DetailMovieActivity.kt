@@ -64,11 +64,11 @@ class DetailMovieActivity : AppCompatActivity() {
         favoriteMovieViewModel.isFav.observe(this) { dataMovie ->
             with(binding) {
                 if (dataMovie == null) {
-                    fabFavorite.setImageResource(R.drawable.ic_favorite_filled)
+                    fabFavorite.setImageResource(R.drawable.ic_favorite_border)
                     favoriteMovieViewModel.isFavoriteMovie(movie.movieId)
                     favoriteMovieViewModel.isFav.observe(this@DetailMovieActivity) {
                         fabFavorite.setOnClickListener {
-                            fabFavorite.setImageResource(R.drawable.ic_favorite_border)
+                            fabFavorite.setImageResource(R.drawable.ic_favorite_filled)
                             favoriteMovieViewModel.insertToFavorite(movie)
                             Snackbar.make(
                                 binding.root,

@@ -52,4 +52,6 @@ class FavoriteTvShowAdapter :
             tvTitle.text = currentItem.title
         }
     }
+
+    override fun getItemCount(): Int = differ.currentList.size
 }

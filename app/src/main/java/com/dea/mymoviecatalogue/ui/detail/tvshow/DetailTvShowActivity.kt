@@ -65,11 +65,11 @@ class DetailTvShowActivity : AppCompatActivity() {
         favoriteTvShowViewModel.isFav.observe(this) { dataMovie ->
             with(binding) {
                 if (dataMovie == null) {
-                    fabFavorite.setImageResource(R.drawable.ic_favorite_filled)
+                    fabFavorite.setImageResource(R.drawable.ic_favorite_border)
                     favoriteTvShowViewModel.isFavoriteTvShow(tvShow.tvShowId)
                     favoriteTvShowViewModel.isFav.observe(this@DetailTvShowActivity) {
                         fabFavorite.setOnClickListener {
-                            fabFavorite.setImageResource(R.drawable.ic_favorite_border)
+                            fabFavorite.setImageResource(R.drawable.ic_favorite_filled)
                             favoriteTvShowViewModel.insertToFavorite(tvShow)
                             Snackbar.make(
                                 binding.root,
