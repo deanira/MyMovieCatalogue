@@ -29,7 +29,7 @@ data class DetailTvShowResponse(
 	val productionCountries: List<ProductionCountriesItem?>? = null,
 
 	@field:SerializedName("id")
-	val id: Int? = null,
+	val id: Int,
 
 	@field:SerializedName("number_of_seasons")
 	val numberOfSeasons: Int? = null,
@@ -41,7 +41,7 @@ data class DetailTvShowResponse(
 	val firstAirDate: String,
 
 	@field:SerializedName("overview")
-	val overview: String? = null,
+	val overview: String,
 
 	@field:SerializedName("seasons")
 	val seasons: List<SeasonsItem?>? = null,
@@ -56,7 +56,7 @@ data class DetailTvShowResponse(
 	val lastEpisodeToAir: LastEpisodeToAir? = null,
 
 	@field:SerializedName("poster_path")
-	val posterPath: String? = null,
+	val posterPath: String,
 
 	@field:SerializedName("origin_country")
 	val originCountry: List<String?>? = null,
@@ -71,10 +71,10 @@ data class DetailTvShowResponse(
 	val originalName: String? = null,
 
 	@field:SerializedName("vote_average")
-	val voteAverage: Double? = null,
+	val voteAverage: Double,
 
 	@field:SerializedName("name")
-	val name: String? = null,
+	val name: String,
 
 	@field:SerializedName("tagline")
 	val tagline: String? = null,

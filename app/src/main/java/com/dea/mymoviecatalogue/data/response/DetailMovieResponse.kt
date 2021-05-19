@@ -14,7 +14,7 @@ data class DetailMovieResponse(
 	val video: Boolean? = null,
 
 	@field:SerializedName("title")
-	val title: String? = null,
+	val title: String,
 
 	@field:SerializedName("backdrop_path")
 	val backdropPath: String? = null,
@@ -32,7 +32,7 @@ data class DetailMovieResponse(
 	val productionCountries: List<ProductionCountriesItem?>? = null,
 
 	@field:SerializedName("id")
-	val id: Int? = null,
+	val id: Int,
 
 	@field:SerializedName("vote_count")
 	val voteCount: Int? = null,
@@ -41,7 +41,7 @@ data class DetailMovieResponse(
 	val budget: Int? = null,
 
 	@field:SerializedName("overview")
-	val overview: String? = null,
+	val overview: String,
 
 	@field:SerializedName("original_title")
 	val originalTitle: String? = null,
@@ -50,7 +50,7 @@ data class DetailMovieResponse(
 	val runtime: Int? = null,
 
 	@field:SerializedName("poster_path")
-	val posterPath: String? = null,
+	val posterPath: String,
 
 	@field:SerializedName("spoken_languages")
 	val spokenLanguages: List<SpokenLanguagesItem?>? = null,
