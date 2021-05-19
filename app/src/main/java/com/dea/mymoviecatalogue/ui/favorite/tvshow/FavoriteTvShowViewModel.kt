@@ -15,7 +15,7 @@ import javax.inject.Named
 
 @HiltViewModel
 class FavoriteTvShowViewModel @Inject constructor(
-    @Named("tvShowRepo") private val favoriteTvShowRepository: FavoriteTvShowRepository
+    @Named("tvRepo") private val favoriteTvShowRepository: FavoriteTvShowRepository
 ): ViewModel() {
     val isFav = MutableLiveData<FavoriteTvShow>()
 

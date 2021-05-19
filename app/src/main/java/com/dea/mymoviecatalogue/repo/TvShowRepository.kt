@@ -11,7 +11,7 @@ import javax.inject.Named
 
 class TvShowRepository @Inject constructor(
     @Named("favoriteTvShowDao") private val favoriteTvShowDao: FavoriteTvShowDao
-) : @Named("tvShowRepo") FavoriteTvShowRepository {
+) : @Named("tvRepo") FavoriteTvShowRepository {
     override suspend fun insertFavourite(tvShow: FavoriteTvShow) {
         favoriteTvShowDao.insertFavorite(tvShow)
     }
