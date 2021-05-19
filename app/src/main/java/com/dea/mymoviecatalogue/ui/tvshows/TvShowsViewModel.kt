@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TvShowsViewModel @Inject constructor(
-    private val repository: MainRepository
+    private val repository: Repository
 ): ViewModel() {
     val listPopularTvShows = MutableLiveData<ArrayList<TvShowResultsItem>>()
     val listOnTheAirTvShows = MutableLiveData<ArrayList<TvShowResultsItem>>()

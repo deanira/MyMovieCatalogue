@@ -1,4 +1,4 @@
-package com.dea.mymoviecatalogue.repo
+package com.dea.mymoviecatalogue.repo.fakerepo
 
 import com.dea.mymoviecatalogue.Resource
 import com.dea.mymoviecatalogue.data.response.*

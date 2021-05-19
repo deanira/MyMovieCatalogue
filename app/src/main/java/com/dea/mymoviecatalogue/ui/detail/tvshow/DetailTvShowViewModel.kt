@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailTvShowViewModel @Inject constructor(
-    private val repository: MainRepository
+    private val repository: Repository
 ) : ViewModel() {
     val tvShowDetail = MutableLiveData<DetailTvShowResponse>()
 

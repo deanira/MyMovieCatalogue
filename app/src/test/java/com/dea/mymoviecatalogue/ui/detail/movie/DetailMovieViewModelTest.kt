@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.dea.mymoviecatalogue.Resource
-import com.dea.mymoviecatalogue.repo.FakeMainRepository
+import com.dea.mymoviecatalogue.repo.fakerepo.FakeMainRepository
 import com.dea.mymoviecatalogue.data.response.DetailMovieResponse
 import com.dea.mymoviecatalogue.utils.CoroutineTestRule
 import com.dea.mymoviecatalogue.utils.DataDummyTest

@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailMovieViewModel @Inject constructor(
-    private val repository: MainRepository
+    private val repository: Repository
 ) : ViewModel() {
     val movieDetail = MutableLiveData<DetailMovieResponse>()
 

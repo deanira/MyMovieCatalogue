@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer
 import com.dea.mymoviecatalogue.Resource
 import com.dea.mymoviecatalogue.data.response.MovieResponse
 import com.dea.mymoviecatalogue.data.response.MovieResultsItem
-import com.dea.mymoviecatalogue.repo.FakeMainRepository
+import com.dea.mymoviecatalogue.repo.fakerepo.FakeMainRepository
 import com.dea.mymoviecatalogue.utils.CoroutineTestRule
 import com.dea.mymoviecatalogue.utils.DataDummyTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi

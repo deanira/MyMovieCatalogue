@@ -1,6 +1,7 @@
 package com.dea.mymoviecatalogue.repo
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.dea.mymoviecatalogue.repo.fakerepo.FakeMainRepository
 import com.dea.mymoviecatalogue.utils.CoroutineTestRule
 import com.dea.mymoviecatalogue.utils.DataDummyTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
