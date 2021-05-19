@@ -24,6 +24,7 @@
             tools:src="@drawable/poster_spiderman"/>
 
         <TextView
+            android:id="@+id/tv_title"
             style="@style/Title.Movie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

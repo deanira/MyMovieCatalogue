@@ -11,6 +11,7 @@ import com.dea.mymoviecatalogue.data.response.MovieResultsItem
 import com.dea.mymoviecatalogue.databinding.ItemGridMovieBinding
 import com.dea.mymoviecatalogue.ui.detail.movie.DetailMovieActivity
 import com.dea.mymoviecatalogue.utils.Constant
+import com.dea.mymoviecatalogue.utils.loadImage
 
 class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
     private var listMovies = ArrayList<MovieResultsItem>()
@@ -41,14 +42,6 @@ class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
             }
         }
     }
-
-    fun ImageView.loadImage(url: String?) {
-        Glide.with(this.context)
-            .load("${Constant.IMAGE_URL}$url")
-            .placeholder(R.color.gray)
-            .into(this)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         val itemGridMovieBinding = ItemGridMovieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MoviesViewHolder(itemGridMovieBinding)

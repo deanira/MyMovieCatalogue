@@ -11,6 +11,7 @@ import com.dea.mymoviecatalogue.data.response.TvShowResultsItem
 import com.dea.mymoviecatalogue.databinding.ItemGridTvShowsBinding
 import com.dea.mymoviecatalogue.ui.detail.tvshow.DetailTvShowActivity
 import com.dea.mymoviecatalogue.utils.Constant
+import com.dea.mymoviecatalogue.utils.loadImage
 
 class TvShowsAdapter : RecyclerView.Adapter<TvShowsAdapter.TvShowsViewHolder>() {
     private var listTvShows = ArrayList<TvShowResultsItem>()
@@ -38,13 +39,6 @@ class TvShowsAdapter : RecyclerView.Adapter<TvShowsAdapter.TvShowsViewHolder>() 
                 }
             }
         }
-    }
-
-    fun ImageView.loadImage(url: String?) {
-        Glide.with(this.context)
-            .load("${Constant.IMAGE_URL}$url")
-            .placeholder(R.color.gray)
-            .into(this)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowsViewHolder {
