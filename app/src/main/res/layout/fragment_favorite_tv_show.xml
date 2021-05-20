@@ -13,4 +13,13 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/item_favorite" />
 
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/warning_tv"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:ignore="RtlCompat" />
 </FrameLayout>

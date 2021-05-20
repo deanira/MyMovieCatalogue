@@ -19,4 +19,6 @@
     <string name="add_to_favorite">Add to Favorite</string>
     <string name="saved_to_favorite">Item has been added to favorite</string>
     <string name="removed_from_favorite">Item has been removed from favorite</string>
+    <string name="warning_tv">Oops you haven\'t got any favorite tv shows yet</string>
+    <string name="warning_movie">Oops you haven\'t got any favorite movies yet</string>
 </resources>

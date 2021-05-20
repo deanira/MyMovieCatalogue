@@ -36,13 +36,19 @@ class FavoriteMovieFragment : Fragment() {
 
         touchHelper()
         favoriteMovieViewModel.getFavoriteMovies().observe(viewLifecycleOwner) {
-            adapter = FavoriteMovieAdapter()
-            adapter.differ.submitList(it)
-            binding.rvFavMovie.apply {
-                layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                adapter = this@FavoriteMovieFragment.adapter
-                setHasFixedSize(true)
+            if (it.isNotEmpty()) {
+                binding.tvWarning.visibility = View.INVISIBLE
+                adapter = FavoriteMovieAdapter()
+                adapter.differ.submitList(it)
+                binding.rvFavMovie.apply {
+                    layoutManager =
+                        LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                    adapter = this@FavoriteMovieFragment.adapter
+                    setHasFixedSize(true)
+                }
+            } else {
+                binding.rvFavMovie.visibility = View.INVISIBLE
+                binding.tvWarning.visibility = View.VISIBLE
             }
         }
     }

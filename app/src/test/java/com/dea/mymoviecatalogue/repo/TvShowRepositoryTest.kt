@@ -6,23 +6,25 @@ import com.dea.mymoviecatalogue.repo.fakerepo.FakeFavoriteTvShowRepository
 import com.dea.mymoviecatalogue.utils.CoroutineTestRule
 import com.dea.mymoviecatalogue.utils.DataDummyTest
 import com.dea.mymoviecatalogue.utils.LiveDataTestUtil
-import junit.framework.Assert
-import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
+import org.junit.Assert
+import org.junit.Assert.*
 import org.junit.Rule
+import org.junit.Test
 
 @ExperimentalCoroutinesApi
-class TvShowRepositoryTest {
+class TvShowRepositoryTest  {
+
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
-
 
     @get:Rule
     var mainCoroutineRule = CoroutineTestRule()
 
     private val repository = FakeFavoriteTvShowRepository()
 
+    @Test
     fun insertFavourite() = runBlockingTest {
         //insert 2 item to db
         DataDummyTest.generateFavouriteMovie().forEachIndexed { index, _ ->
@@ -35,6 +37,7 @@ class TvShowRepositoryTest {
         assertEquals(DataDummyTest.generateFavouriteMovie().size, data.size)
     }
 
+    @Test
     fun getAllData() = runBlockingTest {
         DataDummyTest.generateFavouriteTv().forEach {
             repository.insertFavourite(it)
@@ -46,12 +49,14 @@ class TvShowRepositoryTest {
         assertEquals(DataDummyTest.generateFavouriteMovie().size, data.size)
     }
 
+    @Test
     fun isFavourite() = runBlockingTest {
         val favouriteMovie = repository.isFavourite(1)
         Assert.assertNotNull(favouriteMovie.id)
         print(favouriteMovie)
     }
 
+    @Test
     fun deleteFavourite() = runBlockingTest {
         DataDummyTest.generateFavouriteTv().forEach {
             repository.insertFavourite(it)

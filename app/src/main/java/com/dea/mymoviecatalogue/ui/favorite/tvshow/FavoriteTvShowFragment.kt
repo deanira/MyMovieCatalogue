@@ -38,13 +38,19 @@ class FavoriteTvShowFragment : Fragment() {
 
         touchHelper()
         favoriteTvShowViewModel.getFavoriteTvShows().observe(viewLifecycleOwner) {
-            adapter = FavoriteTvShowAdapter()
-            adapter.differ.submitList(it)
-            binding.rvFavTvShow.apply {
-                layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                adapter = this@FavoriteTvShowFragment.adapter
-                setHasFixedSize(true)
+            if (it.isNotEmpty()){
+                binding.tvWarning.visibility = View.INVISIBLE
+                adapter = FavoriteTvShowAdapter()
+                adapter.differ.submitList(it)
+                binding.rvFavTvShow.apply {
+                    layoutManager =
+                        LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                    adapter = this@FavoriteTvShowFragment.adapter
+                    setHasFixedSize(true)
+                }
+            } else {
+                binding.rvFavTvShow.visibility = View.INVISIBLE
+                binding.tvWarning.visibility = View.VISIBLE
             }
         }
     }
