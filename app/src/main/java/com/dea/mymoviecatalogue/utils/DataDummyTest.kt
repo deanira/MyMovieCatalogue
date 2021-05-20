@@ -365,15 +365,15 @@ object DataDummyTest {
 
     fun generateFavouriteMovie(): List<FavoriteMovie> {
         return listOf(
-            FavoriteMovie(1, 1, "", "", 0.0, ""),
-            FavoriteMovie(2, 2, "", "", 0.0, ""),
+            FavoriteMovie(1, 1, "The Hunger Games", "", 0.0, "","", ""),
+            FavoriteMovie(2, 2, "The Call", "", 0.0, "", "", ""),
         )
     }
 
     fun generateFavouriteTv(): List<FavoriteTvShow> {
         return listOf(
-            FavoriteTvShow(1, 1, "", "", 0.0, ""),
-            FavoriteTvShow(2, 2, "", "", 0.0, ""),
+            FavoriteTvShow(1, 1, "Stranger Things", "", 0.0, "", "", ""),
+            FavoriteTvShow(2, 2, "Anne With An E", "", 0.0, "", "", ""),
         )
     }
 }
