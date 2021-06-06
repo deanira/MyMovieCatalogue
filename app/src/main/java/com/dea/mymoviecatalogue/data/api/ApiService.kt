@@ -1,6 +1,5 @@
 package com.dea.mymoviecatalogue.data.api
 
-import com.dea.mymoviecatalogue.BuildConfig
 import com.dea.mymoviecatalogue.data.response.DetailMovieResponse
 import com.dea.mymoviecatalogue.data.response.DetailTvShowResponse
 import com.dea.mymoviecatalogue.data.response.MovieResponse
